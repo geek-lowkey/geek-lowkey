@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chronicle | News in Depth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Charter', 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.65;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Sleek, Modern Header */
+        .site-header {
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 25px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            color: #1a1a1a;
+            margin-bottom: 5px;
+        }
+
+        .site-subtitle {
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .article-metadata {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Article Styling - Clean and Credible */
+        .main-article {
+            background: white;
+        }
+
+        .article-headline {
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #000;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .article-subhead {
+            font-size: 1.3rem;
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 35px;
+            line-height: 1.5;
+        }
+
+        .article-body p {
+            margin-bottom: 24px;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        .article-body p.lead {
+            font-size: 1.2rem;
+            color: #222;
+            font-weight: 400;
+        }
+
+        /* Subtle "Expert" Blockquote */
+        .expert-inset {
+            float: right;
+            width: 40%;
+            background: #f8f8f8;
+            padding: 25px;
+            margin: 15px 0 25px 30px;
+            border-left: 3px solid #ccc;
+            font-style: normal;
+        }
+
+        @media (max-width: 768px) {
+            .expert-inset {
+                float: none;
+                width: 100%;
+                margin: 25px 0;
+            }
+        }
+
+        .expert-inset .expert-title {
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .expert-inset p {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .expert-name {
+            font-weight: bold;
+            color: #222;
+            font-style: normal;
+        }
+
+        /* Data Visualization Mimic */
+        .data-point {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+            border-left: 4px solid #4a6fa5;
+        }
+
+        .data-point h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .data-point p {
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: #34495e;
+        }
+
+        /* Related Coverage - Looks like a serious sidebar */
+        .related-coverage {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .related-coverage h3 {
+            font-size: 1.1rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .related-items {
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .related-items li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            color: #555;
+        }
+
+        .related-items li:before {
+            content: "•";
+            color: #4a6fa5;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .related-items a {
+            color: #2c5282;
+            text-decoration: none;
+        }
+
+        .related-items a:hover {
+            text-decoration: underline;
+        }
+
+        /* Very Subtle Disclaimer */
+        .legal-footnote {
+            font-size: 0.75rem;
+            color: #999;
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Credible-Looking Header -->
+    <header class="site-header">
+        <h1 class="site-title">The Chronicle</h1>
+        <p class="site-subtitle">News in Depth</p>
+        
+        <div class="article-metadata">
+            <div class="byline">By <strong>James Corwin</strong>, Political Correspondent</div>
+            <div class="date-info">November 12, 2025 | Last Updated: 14:37 IST</div>
+        </div>
+    </header>
+
+    <!-- Main Article - Starts Very Straight -->
+    <article class="main-article">
+        <h1 class="article-headline">Red Fort Security Drill Coincides with PM's Bhutan Visit; Revised Metrics Show Positive Labor Trends</h1>
+        
+        <p class="article-subhead">A day of scheduled national activity unfolds as government cites new data methodologies reflecting broader economic participation.</p>
+
+        <div class="article-body">
+            <p class="lead">NEW DELHI — A planned, high-decibel security exercise at the historic Red Fort this morning occurred alongside Prime Minister Narendra Modi's state visit to Bhutan, a timing officials described as "coincidental but operationally useful."</p>
+
+            <p>The exercise, part of the "Vigilant Shield" series, involved multiple agencies and was designed to test response protocols to unspecified "auditory stimuli," according to a joint statement from the Delhi Police and the Ministry of Home Affairs. The statement emphasized that all protocols were followed and public concern was unwarranted.</p>
+
+            <div class="expert-inset">
+                <div class="expert-title">Analysis</div>
+                <p>"The synchronization of a domestic security drill with a high-profile diplomatic mission is not atypical. It projects normalcy and preparedness on dual fronts, a classic confidence-building maneuver."</p>
+                <p class="expert-name">— Dr. Anya Sharma, Institute for Strategic Affairs</p>
+            </div>
+
+            <p>Eyewitness accounts from the surrounding area reported a brief, loud sound followed by increased security patrols, which authorities confirmed were part of the drill's simulation phase. Traffic was diverted for approximately 40 minutes as a precaution.</p>
+
+            <p>In Thimphu, the Prime Minister's schedule proceeded without interruption. Bilateral talks with his Bhutanese counterpart reportedly focused on hydroelectric partnerships and cultural exchanges, with a joint press conference expected tomorrow.</p>
+
+            <div class="data-point">
+                <h4>Revised Employment Metrics</h4>
+                <p>Concurrently, the Ministry of Statistics and Programme Implementation released its quarterly labor report, showcasing the first application of the revised <strong>Comprehensive Engagement Measurement (CEM)</strong> framework. The new model, developed over two years with international consultants, expands the traditional definition of 'employment'.</p>
+            </div>
+
+            <p>The CEM framework incorporates categories such as informal skill-bartering, digital platform 'gig' curation, and sustained familial commercial assistance—sectors previously underrepresented in headcount surveys. As a result, the official engagement ratio has been adjusted to <strong>94.8%</strong>, a figure officials say more accurately captures the modern, diversified Indian economy.</p>
+
+            <p>"The old binary of 'employed' or 'unemployed' is a 20th-century construct," stated the ministry's chief economist in a briefing. "CEM reflects the spectrum of productive contribution, from formal contracts to the proactive management of social commerce profiles that generate tangible goodwill and potential revenue. It's a holistic view of human capital."</p>
+
+            <p>The methodological shift has been welcomed by several economic think-tanks, though some have called for extended historical data using the new framework for clearer trend analysis. Market response was muted but positive, with analysts noting the reduced statistical volatility the new index provides.</p>
+
+            <p>In related developments, the Delhi Education Directorate confirmed the hybrid learning model, first adopted during the pandemic, will become a permanent "flexible attendance option" for all public schools, citing its alignment with future-of-work trends emphasized in the new CEM data.</p>
+
+        </div>
+
+        <!-- Related Coverage - Sounds Serious -->
+        <aside class="related-coverage">
+            <h3>Further Context</h3>
+            <ul class="related-items">
+                <li><a href="#">Bhutan-India talks: A timeline of the 'hydro-heritage' partnership.</a></li>
+                <li><strong>METHODOLOGY DEEP DIVE:</strong> How the CEM framework redefines 'work'. Key categories include: <em>Micro-Transaction Facilitation, Peer-to-Peer Knowledge Logistics, and Ambient Network Augmentation.</em></li>
+                <li>Security drills at national monuments have increased 30% year-on-year, per official data.</li>
+                <li>Editorial: The Statistical Modernization We Need?</li>
+                <li>Global parallels: How other nations are adjusting economic indicators.</li>
+            </ul>
+        </aside>
+
+    </article>
+
+    <!-- Almost Hidden Disclaimer -->
+    <footer>
+        <p class="legal-footnote">
+            The Chronicle is committed to rigorous journalistic standards. The content above is a creative narrative exploration of current events. All names, characters, and certain incidents are used in a fictitious manner. Any resemblance to actual persons, living or deceased, or actual events, is satirical in nature.
+        </p>
+    </footer>
+
+    <script>
+        // A very subtle interactive touch for the "expert" box
+        document.addEventListener('DOMContentLoaded', function() {
+            const expertBox = document.querySelector('.expert-inset');
+            
+            expertBox.addEventListener('click', function() {
+                // A very dry, professional-style alert
+                if(confirm('View full analyst profile and methodology?')) {
+                    alert('Profile: Dr. Anya Sharma.\nAffiliation: Institute for Strategic Affairs (ISA).\nNote: The ISA is an independent think-tank focusing on geopolitical narrative structures.');
+                }
+            });
+            
+            // Make the data-point slightly interactive
+            const dataPoint = document.querySelector('.data-point');
+            dataPoint.style.cursor = 'pointer';
+            dataPoint.title = "Click for methodological note";
+            
+            dataPoint.addEventListener('click', function() {
+                alert('CEM Framework Note: Category definitions are subject to ongoing review by the Ministry\'s Committee on Semantic Realignment.');
+            });
+        });
+    </script>
+</body>
+</html>
